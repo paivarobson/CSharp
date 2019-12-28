@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace View
 {
-    public partial class CadastroVeiculo : Form
+    public partial class frmCadastroVeiculo : Form
     {
-        public CadastroVeiculo()
+        public frmCadastroVeiculo()
         {
             InitializeComponent();
         }

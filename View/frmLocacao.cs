@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace View
 {
-    public partial class Locacao : Form
+    public partial class frmLocacao : Form
     {
-        public Locacao()
+        public frmLocacao()
         {
             InitializeComponent();
         }
