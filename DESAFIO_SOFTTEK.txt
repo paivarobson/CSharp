@@ -1,0 +1,14 @@
+#####  DESAFIO SOFTTEK  #####
+
+- Sistema em C# de LOCAÇÃO DE VEÍCULOS; 
+- Repositório GitHub;
+- Base de dados (cinco (5) 
+	VEÍCULOS, 
+	LOCAÇÃO e 
+	VALOR_POR_DIÁRIA).
+	
+- Relatório em Crystal Reports com a 
+	QUANTIDADE_DE_VEÍCULOS_DISPONÍVEIS, 
+	QUANTIDADE_DE_VEÍCULOS_LOCADOS, 
+	DATA_DE_LOCAÇÃO e 
+	DATA_DE_DEVOLUÇÃO
