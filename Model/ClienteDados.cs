@@ -25,6 +25,9 @@ namespace Model
 
         }
 
+        SqlCommand sqlCommand = new SqlCommand();
+        SqlConnection sqlConnection = new SqlConnection();
+
         public ClienteDados(int clienteCodigo, string clienteCPF, string clienteNome, bool clienteTipo)
         {
             this.ClienteCodigo = clienteCodigo;
@@ -36,14 +39,13 @@ namespace Model
         public string CadastrarCliente(ClienteDados Cliente)
         {
             string mensagem = "";
-            SqlConnection sqlConnection = new SqlConnection();
+
             try
             {
                 //Conexão BD
                 sqlConnection.ConnectionString = ConexaoDB.conexao;
                 sqlConnection.Open();
                 //Acesso ao BD via procedure
-                SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = sqlConnection;
                 sqlCommand.CommandText = "proc_cadastrarCliente";
                 sqlCommand.CommandType = CommandType.StoredProcedure;
@@ -82,14 +84,13 @@ namespace Model
         public string AlterarCliente(ClienteDados Cliente)
         {
             string mensagem = "";
-            SqlConnection sqlConnection = new SqlConnection();
+
             try
             {
                 //Conexão BD
                 sqlConnection.ConnectionString = ConexaoDB.conexao;
                 sqlConnection.Open();
                 //Acesso ao BD via procedure
-                SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = sqlConnection;
                 sqlCommand.CommandText = "proc_alterarCliente";
                 sqlCommand.CommandType = CommandType.StoredProcedure;
@@ -135,14 +136,13 @@ namespace Model
         public string ExcluirCliente(ClienteDados Cliente)
         {
             string mensagem = "";
-            SqlConnection sqlConnection = new SqlConnection();
+
             try
             {
                 //Conexão BD
                 sqlConnection.ConnectionString = ConexaoDB.conexao;
                 sqlConnection.Open();
                 //Acesso ao BD via procedure
-                SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = sqlConnection;
                 sqlCommand.CommandText = "proc_excluirCliente";
                 sqlCommand.CommandType = CommandType.StoredProcedure;
@@ -173,7 +173,6 @@ namespace Model
         public DataTable ConsultarCliente(ClienteDados Cliente)
         {
             DataTable dataTableCliente = new DataTable("cliente");
-            SqlConnection sqlConnection = new SqlConnection();
 
             try
             {
@@ -181,7 +180,6 @@ namespace Model
                 sqlConnection.ConnectionString = ConexaoDB.conexao;
                 sqlConnection.Open();
                 //Acesso ao BD via procedure
-                SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = sqlConnection;
                 sqlCommand.CommandText = "proc_consultarCliente";
                 sqlCommand.CommandType = CommandType.StoredProcedure;
