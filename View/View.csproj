@@ -54,11 +54,11 @@
     <Compile Include="CadastroVeiculo.Designer.cs">
       <DependentUpon>CadastroVeiculo.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLocacao.cs">
+    <Compile Include="Locacao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLocacao.Designer.cs">
-      <DependentUpon>frmLocacao.cs</DependentUpon>
+    <Compile Include="Locacao.Designer.cs">
+      <DependentUpon>Locacao.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -75,8 +75,8 @@
     <EmbeddedResource Include="CadastroVeiculo.resx">
       <DependentUpon>CadastroVeiculo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLocacao.resx">
-      <DependentUpon>frmLocacao.cs</DependentUpon>
+    <EmbeddedResource Include="Locacao.resx">
+      <DependentUpon>Locacao.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

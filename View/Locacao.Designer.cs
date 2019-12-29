@@ -215,7 +215,7 @@
             this.textBox7.Size = new System.Drawing.Size(96, 20);
             this.textBox7.TabIndex = 50;
             // 
-            // Locacao
+            // frmLocacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -239,7 +239,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-            this.Name = "Locacao";
+            this.Name = "frmLocacao";
             this.Text = "Locacao";
             this.ResumeLayout(false);
             this.PerformLayout();
