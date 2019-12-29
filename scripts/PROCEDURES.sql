@@ -2,16 +2,13 @@
 --###  PROCEDURES CLIENTE ###
 --CADASTRAR
 CREATE PROC proc_cadastrarCliente
-@clienteCodigo int output,
 @clienteCPF varchar(11),
 @clienteNome varchar(50)
 AS
 INSERT INTO CLIENTE (
-	CLICOD, 
 	CLICPF, 
 	CLINOM)
 VALUES (
-	@clienteCodigo, 
 	@clienteCPF, 
 	@clienteNome)
 GO
