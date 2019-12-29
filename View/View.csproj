@@ -54,6 +54,12 @@
     <Compile Include="CadastroVeiculo.Designer.cs">
       <DependentUpon>CadastroVeiculo.cs</DependentUpon>
     </Compile>
+    <Compile Include="RelatorioLocacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RelatorioLocacao.Designer.cs">
+      <DependentUpon>RelatorioLocacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Locacao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CadastroVeiculo.resx">
       <DependentUpon>CadastroVeiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RelatorioLocacao.resx">
+      <DependentUpon>RelatorioLocacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Locacao.resx">
       <DependentUpon>Locacao.cs</DependentUpon>
