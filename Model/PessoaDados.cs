@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace Model
 {
-    class PessoaDados
+    public class PessoaDados
     {
         private int pessoaCodigo;
         private string pessoaCPF;
@@ -32,8 +32,8 @@ namespace Model
             this.PessoaNome = pessoaNome;
             this.PessoaTipo = pessoaTipo;
         }        
-        //Cadastrar
-        public void CadastrarPessoa(PessoaDados Pessoa)
+        //CADASTRAR
+        public string CadastrarPessoa(PessoaDados Pessoa)
         {
             string mensagem = "";
             SqlConnection sqlConnection = new SqlConnection();
@@ -87,9 +87,11 @@ namespace Model
                 if (sqlConnection.State == ConnectionState.Open)
                     sqlConnection.Close();
             }
+
+            return mensagem;
         }
-        //Alterar
-        public void AlterarPessoa(PessoaDados Pessoa)
+        //ALTERAR
+        public string AlterarPessoa(PessoaDados Pessoa)
         {
             string mensagem = "";
             SqlConnection sqlConnection = new SqlConnection();
@@ -144,9 +146,11 @@ namespace Model
                 if (sqlConnection.State == ConnectionState.Open)
                     sqlConnection.Close();
             }
+
+            return mensagem;
         }
-        //Excluir
-        public void ExcluirPessoa(PessoaDados Pessoa)
+        //EXCLUIR
+        public string ExcluirPessoa(PessoaDados Pessoa)
         {
             string mensagem = "";
             SqlConnection sqlConnection = new SqlConnection();
@@ -160,7 +164,6 @@ namespace Model
                 sqlCommand.Connection = sqlConnection;
                 sqlCommand.CommandText = "proc_excluirPessoa";
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-
                 //Parãmetro CÓDIGO
                 SqlParameter PPessoaCodigo = new SqlParameter();
                 PPessoaCodigo.ParameterName = "@pessoaCodigo";
@@ -181,8 +184,10 @@ namespace Model
                 if (sqlConnection.State == ConnectionState.Open)
                     sqlConnection.Close();
             }
+
+            return mensagem;
         }
-        //Consultar
+        //CONSULTAR
         public DataTable ConsultarPessoa(PessoaDados Pessoa)
         {
             DataTable dataTablePessoa = new DataTable("pessoa");
@@ -190,8 +195,10 @@ namespace Model
 
             try
             {
+                //Conexão BD
                 sqlConnection.ConnectionString = ConexaoDB.conexao;
-
+                sqlConnection.Open();
+                //Acesso ao BD via procedure
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = sqlConnection;
                 sqlCommand.CommandText = "proc_consultarPessoa";
