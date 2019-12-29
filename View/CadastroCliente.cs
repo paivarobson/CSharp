@@ -43,5 +43,11 @@ namespace View
         {
             Cadastrar();
         }
+
+        private void consultarAoPressionarEnter(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                Consultar();
+        }
     }
 }

@@ -54,6 +54,7 @@
             this.txbCodigo.Name = "txbCodigo";
             this.txbCodigo.Size = new System.Drawing.Size(68, 20);
             this.txbCodigo.TabIndex = 0;
+            this.txbCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.consultarAoPressionarEnter);
             // 
             // lbCodigo
             // 
