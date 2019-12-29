@@ -1,42 +1,46 @@
 
-
---PROCEDURE CADASTRAR
-CREATE PROC proc_cadastrarPessoa
-@pessoaCodigo int output,
-@pessoaCPF varchar(11),
-@pessoaNome varchar(50),
-@pessoaTipo char
+--###  PROCEDURES CLIENTE ###
+--CADASTRAR
+CREATE PROC proc_cadastrarCliente
+@clienteCodigo int output,
+@clienteCPF varchar(11),
+@clienteNome varchar(50)
 AS
-INSERT INTO PESSOA (PESCOD,	PESCPF, PESNOM,	PESTIP)
-	VALUES (@pessoaCodigo, @pessoaCPF, @pessoaNome, @pessoaTipo)
+INSERT INTO CLIENTE (
+	CLICOD, 
+	CLICPF, 
+	CLINOM)
+VALUES (
+	@clienteCodigo, 
+	@clienteCPF, 
+	@clienteNome)
 GO
 
---PROCEDURE ALTERAR
-CREATE PROC proc_alterarPessoa
-@pessoaCodigo int,
-@pessoaCPF varchar(11),
-@pessoaNome varchar(50),
-@pessoaTipo char
+--ALTERAR
+CREATE PROC proc_alterarCliente
+@clienteCodigo int,
+@clienteCPF varchar(11),
+@clienteNome varchar(50)
 AS
-UPDATE PESSOA SET 
-	PESCPF = @pessoaCPF,
-	PESNOM = @pessoaNome,
-	PESTIP = @pessoaTipo
-WHERE PESCOD = @pessoaCodigo
+UPDATE CLIENTE 
+SET CLICPF = @clienteCPF,
+	CLINOM = @clienteNome
+WHERE CLICOD = @clienteCodigo
 GO
 
---PROCEDURE EXCLUIR
-CREATE PROC proc_excluirPessoa
-@pessoaCodigo int
+--EXCLUIR
+CREATE PROC proc_excluirCliente
+@clienteCodigo int
 AS
-DELETE FROM PESSOA 
-WHERE PESCOD = @pessoaCodigo
+DELETE FROM CLIENTE 
+WHERE CLICOD = @clienteCodigo
 GO
 
---PROCEDURE CONSULTAR
-CREATE PROC proc_consultarPessoa
-@pessoaCodigo int
+--CONSULTAR
+CREATE PROC proc_consultarCliente
+@clienteCodigo int
 AS
-SELECT * FROM PESSOA
-WHERE PESCOD = @pessoaCodigo
+SELECT * FROM CLIENTE
+WHERE CLICOD = @clienteCodigo
 GO
+
