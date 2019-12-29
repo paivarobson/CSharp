@@ -1,4 +1,4 @@
-#####  DESAFIO SOFTTEK  #####
+#####  DESAFIO  #####
 
 - Sistema em C# de LOCAÇÃO DE VEÍCULOS; 
 - Repositório GitHub;
