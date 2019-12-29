@@ -8,6 +8,6 @@ namespace Model
 {
     public class ConexaoDB
     {
-        public static string conexao = "Data Source = PAIVA-PC/SQLEXPRESS; Initial Catalog = LOCACAO; User = sa; Password = 123";
+        public static string conexao = "Data Source = PAIVA-PC\\SQLEXPRESS; Initial Catalog = LOCACAO; User = sa; Password = 123";
     }
 }
