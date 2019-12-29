@@ -56,6 +56,7 @@ namespace Model
                 PClienteCPF.SqlDbType = SqlDbType.VarChar;
                 PClienteCPF.Size = 11;
                 PClienteCPF.Value = Cliente.ClienteCPF;
+                sqlCommand.Parameters.Clear();
                 sqlCommand.Parameters.Add(PClienteCPF);
                 //Parãmetro NOME
                 SqlParameter PClienteNome = new SqlParameter();
@@ -100,6 +101,7 @@ namespace Model
                 PClienteCodigo.ParameterName = "@clienteCodigo";
                 PClienteCodigo.SqlDbType = SqlDbType.Int;
                 PClienteCodigo.Value = Cliente.ClienteCodigo;
+                sqlCommand.Parameters.Clear();
                 sqlCommand.Parameters.Add(PClienteCodigo);
                 //Parãmetro CPF
                 SqlParameter PClienteCPF = new SqlParameter();
@@ -117,7 +119,7 @@ namespace Model
                 sqlCommand.Parameters.Add(PClienteNome);
 
                 mensagem = sqlCommand.ExecuteNonQuery() == 1 ?
-                    "Cadastro realizado com sucesso" : "Algo de errado ocorreu e não foi possível alterar o registro";
+                    "Alteração realizada com sucesso" : "Algo de errado ocorreu e não foi possível alterar o registro";
 
             }
             catch (Exception e)
@@ -151,10 +153,11 @@ namespace Model
                 PClienteCodigo.ParameterName = "@clienteCodigo";
                 PClienteCodigo.SqlDbType = SqlDbType.Int;
                 PClienteCodigo.Value = Cliente.ClienteCodigo;
+                sqlCommand.Parameters.Clear();
                 sqlCommand.Parameters.Add(PClienteCodigo);
 
                 mensagem = sqlCommand.ExecuteNonQuery() == 1 ?
-                    "Cadastro realizado com sucesso" : "Algo de errado ocorreu e não foi possível excluir o registro";
+                    "Exclusão realizada com sucesso" : "Algo de errado ocorreu e não foi possível excluir o registro";
 
             }
             catch (Exception e)
@@ -171,7 +174,7 @@ namespace Model
         }
         //CONSULTAR
         public DataTable ConsultarCliente(ClienteDados Cliente)
-        {
+       {
             DataTable dataTableCliente = new DataTable("cliente");
 
             try
@@ -188,7 +191,38 @@ namespace Model
                 PClienteCodigo.ParameterName = "@clienteCodigo";
                 PClienteCodigo.SqlDbType = SqlDbType.Int;
                 PClienteCodigo.Value = Cliente.ClienteCodigo;
+                sqlCommand.Parameters.Clear();
                 sqlCommand.Parameters.Add(PClienteCodigo);
+
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                sqlDataAdapter.Fill(dataTableCliente);
+            }
+            catch (Exception e)
+            {
+                dataTableCliente = null;
+            }
+            finally
+            {
+                if (sqlConnection.State == ConnectionState.Open)
+                    sqlConnection.Close();
+            }
+
+            return dataTableCliente;
+        }
+        //RECUPERAR ÚLTIMO REGISTRO CADASTRADO
+        public DataTable RecuperarUltimoCadastroCliente(ClienteDados Cliente)
+        {
+            DataTable dataTableCliente = new DataTable("cliente");
+
+            try
+            {
+                //Conexão BD
+                sqlConnection.ConnectionString = ConexaoDB.conexao;
+                sqlConnection.Open();
+                //Acesso ao BD via procedure
+                sqlCommand.Connection = sqlConnection;
+                sqlCommand.CommandText = "proc_recuperarUltimoCadastroCliente";
+                sqlCommand.CommandType = CommandType.StoredProcedure;
 
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
                 sqlDataAdapter.Fill(dataTableCliente);
