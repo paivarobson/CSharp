@@ -11,7 +11,7 @@ namespace Controller
     public class ClienteController
     {
         //CADASTRAR
-        public static string CadastrarCliente(string clienteCPF, string clienteNome)
+        public string CadastrarCliente(string clienteCPF, string clienteNome)
         {
             ClienteDados clienteDados = new ClienteDados();
             clienteDados.ClienteCPF = clienteCPF;
@@ -20,19 +20,18 @@ namespace Controller
             return clienteDados.CadastrarCliente(clienteDados);
         }
         //ALTERAR
-        public static string AlterarCliente(int clienteCodigo, string clienteCPF, string clienteNome, bool clienteTipo)
+        public string AlterarCliente(int clienteCodigo, string clienteCPF, string clienteNome)
         {
             ClienteDados clienteDados = new ClienteDados();
             clienteDados.ClienteCodigo = clienteCodigo;
             clienteDados.ClienteCPF = clienteCPF;
             clienteDados.ClienteNome = clienteNome;
-            clienteDados.ClienteTipo = clienteTipo;
 
             return clienteDados.AlterarCliente(clienteDados);
         }
 
         //EXCLUIR
-        public static string ExcluirCliente(int clienteCodigo)
+        public string ExcluirCliente(int clienteCodigo)
         {
             ClienteDados clienteDados = new ClienteDados();
             clienteDados.ClienteCodigo = clienteCodigo;
@@ -40,7 +39,7 @@ namespace Controller
             return clienteDados.ExcluirCliente(clienteDados);
         }
         //CONSULTAR
-        public static DataTable ConsultarCliente(int clienteCodigo)
+        public DataTable ConsultarCliente(int clienteCodigo)
         {
             ClienteDados clienteDados = new ClienteDados();
             clienteDados.ClienteCodigo = clienteCodigo;
