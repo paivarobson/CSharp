@@ -11,12 +11,11 @@ namespace Controller
     public class ClienteController
     {
         //CADASTRAR
-        public static string CadastrarCliente(string clienteCPF, string clienteNome, bool clienteTipo)
+        public static string CadastrarCliente(string clienteCPF, string clienteNome)
         {
             ClienteDados clienteDados = new ClienteDados();
             clienteDados.ClienteCPF = clienteCPF;
             clienteDados.ClienteNome = clienteNome;
-            clienteDados.ClienteTipo = clienteTipo;
 
             return clienteDados.CadastrarCliente(clienteDados);
         }

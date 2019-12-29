@@ -48,12 +48,6 @@ namespace Model
                 sqlCommand.CommandText = "proc_cadastrarCliente";
                 sqlCommand.CommandType = CommandType.StoredProcedure;
                 
-                //Parãmetro CÓDIGO
-                SqlParameter PClienteCodigo = new SqlParameter();
-                PClienteCodigo.ParameterName = "@clienteCodigo";
-                PClienteCodigo.SqlDbType = SqlDbType.Int;
-                PClienteCodigo.Direction = ParameterDirection.Output;
-                sqlCommand.Parameters.Add(PClienteCodigo);
                 //Parãmetro CPF
                 SqlParameter PClienteCPF = new SqlParameter();
                 PClienteCPF.ParameterName = "@clienteCPF";
@@ -68,12 +62,6 @@ namespace Model
                 PClienteNome.Size = 50;
                 PClienteNome.Value = Cliente.ClienteNome;
                 sqlCommand.Parameters.Add(PClienteNome);
-                //Parãmetro TIPO
-                SqlParameter PClienteTipo = new SqlParameter();
-                PClienteTipo.ParameterName = "@clienteTipo";
-                PClienteTipo.SqlDbType = SqlDbType.Char;
-                PClienteTipo.Value = Cliente.ClienteTipo;
-                sqlCommand.Parameters.Add(PClienteTipo);
 
                 mensagem = sqlCommand.ExecuteNonQuery() == 1 ? 
                     "Cadastro realizado com sucesso" : "Algo de errado ocorreu e não foi possível inserir o registro";
@@ -126,12 +114,6 @@ namespace Model
                 PClienteNome.Size = 50;
                 PClienteNome.Value = Cliente.ClienteNome;
                 sqlCommand.Parameters.Add(PClienteNome);
-                //Parãmetro TIPO
-                SqlParameter PClienteTipo = new SqlParameter();
-                PClienteTipo.ParameterName = "@clienteTipo";
-                PClienteTipo.SqlDbType = SqlDbType.Char;
-                PClienteTipo.Value = Cliente.ClienteTipo;
-                sqlCommand.Parameters.Add(PClienteTipo);
 
                 mensagem = sqlCommand.ExecuteNonQuery() == 1 ?
                     "Cadastro realizado com sucesso" : "Algo de errado ocorreu e não foi possível alterar o registro";

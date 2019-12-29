@@ -21,7 +21,6 @@ namespace View
 
             this.toolTipFrmCadastroCliente.SetToolTip(this.txbCodigo, "Código");
             this.toolTipFrmCadastroCliente.SetToolTip(this.txbCPF, "Digite o CPF");
-            this.toolTipFrmCadastroCliente.SetToolTip(this.cbTipo, "Insira o tipo da cliente");
             this.toolTipFrmCadastroCliente.SetToolTip(this.txbNome, "Digite o nome");
         }
 
@@ -32,8 +31,7 @@ namespace View
         //CADASTRAR
         private void Cadastrar()
         {
-            //this.dtGridCadastroCliente.DataSource = ClienteController.CadastrarCliente(
-            //    this.txbCPF.Text, this.txbNome, this.cbTipo.Text);
+            this.dtGridCadastroCliente.DataSource = ClienteController.CadastrarCliente(this.txbCPF.Text, this.txbNome.Text);
         }
         //CONSULTAR
         private void Consultar()
@@ -41,5 +39,9 @@ namespace View
             this.dtGridCadastroCliente.DataSource = ClienteController.ConsultarCliente(Convert.ToInt32(this.txbCodigo.Text));
         }
 
+        private void Gravar(object sender, EventArgs e)
+        {
+            Cadastrar();
+        }
     }
 }

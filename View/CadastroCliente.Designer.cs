@@ -33,11 +33,9 @@
             this.lbCodigo = new System.Windows.Forms.Label();
             this.lbCPF = new System.Windows.Forms.Label();
             this.lbNome = new System.Windows.Forms.Label();
-            this.lbTipo = new System.Windows.Forms.Label();
             this.txbCPF = new System.Windows.Forms.TextBox();
             this.txbNome = new System.Windows.Forms.TextBox();
             this.lbTitulo = new System.Windows.Forms.Label();
-            this.cbTipo = new System.Windows.Forms.ComboBox();
             this.btNovo = new System.Windows.Forms.Button();
             this.btAlterar = new System.Windows.Forms.Button();
             this.btCancelar = new System.Windows.Forms.Button();
@@ -81,21 +79,11 @@
             // 
             this.lbNome.AutoSize = true;
             this.lbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNome.Location = new System.Drawing.Point(17, 114);
+            this.lbNome.Location = new System.Drawing.Point(206, 73);
             this.lbNome.Name = "lbNome";
             this.lbNome.Size = new System.Drawing.Size(44, 15);
             this.lbNome.TabIndex = 3;
             this.lbNome.Text = "Nome:";
-            // 
-            // lbTipo
-            // 
-            this.lbTipo.AutoSize = true;
-            this.lbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTipo.Location = new System.Drawing.Point(206, 72);
-            this.lbTipo.Name = "lbTipo";
-            this.lbTipo.Size = new System.Drawing.Size(34, 15);
-            this.lbTipo.TabIndex = 4;
-            this.lbTipo.Text = "Tipo:";
             // 
             // txbCPF
             // 
@@ -106,7 +94,7 @@
             // 
             // txbNome
             // 
-            this.txbNome.Location = new System.Drawing.Point(20, 132);
+            this.txbNome.Location = new System.Drawing.Point(209, 91);
             this.txbNome.Name = "txbNome";
             this.txbNome.Size = new System.Drawing.Size(338, 20);
             this.txbNome.TabIndex = 6;
@@ -121,38 +109,27 @@
             this.lbTitulo.TabIndex = 8;
             this.lbTitulo.Text = "Cadastro de Cliente";
             // 
-            // cbTipo
-            // 
-            this.cbTipo.FormattingEnabled = true;
-            this.cbTipo.Items.AddRange(new object[] {
-            "LOCADOR",
-            "LOCATÁRIO"});
-            this.cbTipo.Location = new System.Drawing.Point(209, 90);
-            this.cbTipo.Name = "cbTipo";
-            this.cbTipo.Size = new System.Drawing.Size(149, 21);
-            this.cbTipo.TabIndex = 9;
-            // 
             // btNovo
             // 
-            this.btNovo.Location = new System.Drawing.Point(232, 10);
+            this.btNovo.Location = new System.Drawing.Point(310, 9);
             this.btNovo.Name = "btNovo";
-            this.btNovo.Size = new System.Drawing.Size(50, 23);
+            this.btNovo.Size = new System.Drawing.Size(75, 23);
             this.btNovo.TabIndex = 10;
             this.btNovo.Text = "Novo";
             this.btNovo.UseVisualStyleBackColor = true;
             // 
             // btAlterar
             // 
-            this.btAlterar.Location = new System.Drawing.Point(289, 10);
+            this.btAlterar.Location = new System.Drawing.Point(391, 9);
             this.btAlterar.Name = "btAlterar";
-            this.btAlterar.Size = new System.Drawing.Size(50, 23);
+            this.btAlterar.Size = new System.Drawing.Size(75, 23);
             this.btAlterar.TabIndex = 11;
             this.btAlterar.Text = "Alterar";
             this.btAlterar.UseVisualStyleBackColor = true;
             // 
             // btCancelar
             // 
-            this.btCancelar.Location = new System.Drawing.Point(375, 130);
+            this.btCancelar.Location = new System.Drawing.Point(391, 130);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(75, 23);
             this.btCancelar.TabIndex = 12;
@@ -161,31 +138,32 @@
             // 
             // btExcluir
             // 
-            this.btExcluir.Location = new System.Drawing.Point(346, 10);
+            this.btExcluir.Location = new System.Drawing.Point(472, 9);
             this.btExcluir.Name = "btExcluir";
-            this.btExcluir.Size = new System.Drawing.Size(50, 23);
+            this.btExcluir.Size = new System.Drawing.Size(75, 23);
             this.btExcluir.TabIndex = 13;
             this.btExcluir.Text = "Excluir";
             this.btExcluir.UseVisualStyleBackColor = true;
             // 
             // btGravar
             // 
-            this.btGravar.Location = new System.Drawing.Point(456, 130);
+            this.btGravar.Location = new System.Drawing.Point(472, 130);
             this.btGravar.Name = "btGravar";
             this.btGravar.Size = new System.Drawing.Size(75, 23);
             this.btGravar.TabIndex = 14;
             this.btGravar.Text = "Gravar";
             this.btGravar.UseVisualStyleBackColor = true;
+            this.btGravar.Click += new System.EventHandler(this.Gravar);
             // 
             // dtGridCadastroCliente
             // 
             this.dtGridCadastroCliente.AllowUserToAddRows = false;
             this.dtGridCadastroCliente.AllowUserToDeleteRows = false;
             this.dtGridCadastroCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtGridCadastroCliente.Location = new System.Drawing.Point(12, 185);
+            this.dtGridCadastroCliente.Location = new System.Drawing.Point(12, 159);
             this.dtGridCadastroCliente.Name = "dtGridCadastroCliente";
             this.dtGridCadastroCliente.ReadOnly = true;
-            this.dtGridCadastroCliente.Size = new System.Drawing.Size(519, 178);
+            this.dtGridCadastroCliente.Size = new System.Drawing.Size(543, 204);
             this.dtGridCadastroCliente.TabIndex = 15;
             // 
             // errorProviderFrmCadastroCliente
@@ -196,18 +174,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(549, 378);
+            this.ClientSize = new System.Drawing.Size(567, 378);
             this.Controls.Add(this.dtGridCadastroCliente);
             this.Controls.Add(this.btGravar);
             this.Controls.Add(this.btExcluir);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btAlterar);
             this.Controls.Add(this.btNovo);
-            this.Controls.Add(this.cbTipo);
             this.Controls.Add(this.lbTitulo);
             this.Controls.Add(this.txbNome);
             this.Controls.Add(this.txbCPF);
-            this.Controls.Add(this.lbTipo);
             this.Controls.Add(this.lbNome);
             this.Controls.Add(this.lbCPF);
             this.Controls.Add(this.lbCodigo);
@@ -228,11 +204,9 @@
         private System.Windows.Forms.Label lbCodigo;
         private System.Windows.Forms.Label lbCPF;
         private System.Windows.Forms.Label lbNome;
-        private System.Windows.Forms.Label lbTipo;
         private System.Windows.Forms.TextBox txbCPF;
         private System.Windows.Forms.TextBox txbNome;
         private System.Windows.Forms.Label lbTitulo;
-        private System.Windows.Forms.ComboBox cbTipo;
         private System.Windows.Forms.Button btNovo;
         private System.Windows.Forms.Button btAlterar;
         private System.Windows.Forms.Button btCancelar;
