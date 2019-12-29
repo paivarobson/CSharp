@@ -242,5 +242,12 @@ namespace View
             if (maskCPF.Text.Equals("   .   .   -"))
                 maskCPF.SelectAll();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var formRelatorio = new FrmRelatorio();
+
+            formRelatorio.Show();
+        }
     }
 }

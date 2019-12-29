@@ -44,6 +44,7 @@
             this.errorProviderFrmCadastroCliente = new System.Windows.Forms.ErrorProvider(this.components);
             this.toolTipFrmCadastroCliente = new System.Windows.Forms.ToolTip(this.components);
             this.maskCPF = new System.Windows.Forms.MaskedTextBox();
+            this.btRelatorio = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridCadastroCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderFrmCadastroCliente)).BeginInit();
             this.SuspendLayout();
@@ -187,11 +188,22 @@
             this.maskCPF.Click += new System.EventHandler(this.posicionarCursor);
             this.maskCPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PermitirSomenteNumeros);
             // 
+            // btRelatorio
+            // 
+            this.btRelatorio.Location = new System.Drawing.Point(472, 38);
+            this.btRelatorio.Name = "btRelatorio";
+            this.btRelatorio.Size = new System.Drawing.Size(75, 23);
+            this.btRelatorio.TabIndex = 9;
+            this.btRelatorio.Text = "Relatório";
+            this.btRelatorio.UseVisualStyleBackColor = true;
+            this.btRelatorio.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmCadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(567, 378);
+            this.Controls.Add(this.btRelatorio);
             this.Controls.Add(this.maskCPF);
             this.Controls.Add(this.dtGridCadastroCliente);
             this.Controls.Add(this.btGravar);
@@ -232,5 +244,6 @@
         private System.Windows.Forms.ErrorProvider errorProviderFrmCadastroCliente;
         private System.Windows.Forms.ToolTip toolTipFrmCadastroCliente;
         private System.Windows.Forms.MaskedTextBox maskCPF;
+        private System.Windows.Forms.Button btRelatorio;
     }
 }
