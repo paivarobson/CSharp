@@ -1,6 +1,6 @@
 ﻿namespace View
 {
-    partial class frmCadastroPessoa
+    partial class FrmCadastroCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -43,11 +43,11 @@
             this.btCancelar = new System.Windows.Forms.Button();
             this.btExcluir = new System.Windows.Forms.Button();
             this.btGravar = new System.Windows.Forms.Button();
-            this.dtGridCadastroPessoa = new System.Windows.Forms.DataGridView();
-            this.errorProviderFrmCadastroPessoa = new System.Windows.Forms.ErrorProvider(this.components);
-            this.toolTipFrmCadastroPessoa = new System.Windows.Forms.ToolTip(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dtGridCadastroPessoa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProviderFrmCadastroPessoa)).BeginInit();
+            this.dtGridCadastroCliente = new System.Windows.Forms.DataGridView();
+            this.errorProviderFrmCadastroCliente = new System.Windows.Forms.ErrorProvider(this.components);
+            this.toolTipFrmCadastroCliente = new System.Windows.Forms.ToolTip(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridCadastroCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderFrmCadastroCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // txbCodigo
@@ -117,13 +117,16 @@
             this.lbTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitulo.Location = new System.Drawing.Point(21, 9);
             this.lbTitulo.Name = "lbTitulo";
-            this.lbTitulo.Size = new System.Drawing.Size(178, 24);
+            this.lbTitulo.Size = new System.Drawing.Size(174, 24);
             this.lbTitulo.TabIndex = 8;
-            this.lbTitulo.Text = "Cadastro de Pessoa";
+            this.lbTitulo.Text = "Cadastro de Cliente";
             // 
             // cbTipo
             // 
             this.cbTipo.FormattingEnabled = true;
+            this.cbTipo.Items.AddRange(new object[] {
+            "LOCADOR",
+            "LOCATÁRIO"});
             this.cbTipo.Location = new System.Drawing.Point(209, 90);
             this.cbTipo.Name = "cbTipo";
             this.cbTipo.Size = new System.Drawing.Size(149, 21);
@@ -174,27 +177,27 @@
             this.btGravar.Text = "Gravar";
             this.btGravar.UseVisualStyleBackColor = true;
             // 
-            // dtGridCadastroPessoa
+            // dtGridCadastroCliente
             // 
-            this.dtGridCadastroPessoa.AllowUserToAddRows = false;
-            this.dtGridCadastroPessoa.AllowUserToDeleteRows = false;
-            this.dtGridCadastroPessoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtGridCadastroPessoa.Location = new System.Drawing.Point(12, 185);
-            this.dtGridCadastroPessoa.Name = "dtGridCadastroPessoa";
-            this.dtGridCadastroPessoa.ReadOnly = true;
-            this.dtGridCadastroPessoa.Size = new System.Drawing.Size(519, 178);
-            this.dtGridCadastroPessoa.TabIndex = 15;
+            this.dtGridCadastroCliente.AllowUserToAddRows = false;
+            this.dtGridCadastroCliente.AllowUserToDeleteRows = false;
+            this.dtGridCadastroCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGridCadastroCliente.Location = new System.Drawing.Point(12, 185);
+            this.dtGridCadastroCliente.Name = "dtGridCadastroCliente";
+            this.dtGridCadastroCliente.ReadOnly = true;
+            this.dtGridCadastroCliente.Size = new System.Drawing.Size(519, 178);
+            this.dtGridCadastroCliente.TabIndex = 15;
             // 
-            // errorProviderFrmCadastroPessoa
+            // errorProviderFrmCadastroCliente
             // 
-            this.errorProviderFrmCadastroPessoa.ContainerControl = this;
+            this.errorProviderFrmCadastroCliente.ContainerControl = this;
             // 
-            // frmCadastroPessoa
+            // FrmCadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(549, 378);
-            this.Controls.Add(this.dtGridCadastroPessoa);
+            this.Controls.Add(this.dtGridCadastroCliente);
             this.Controls.Add(this.btGravar);
             this.Controls.Add(this.btExcluir);
             this.Controls.Add(this.btCancelar);
@@ -209,11 +212,11 @@
             this.Controls.Add(this.lbCPF);
             this.Controls.Add(this.lbCodigo);
             this.Controls.Add(this.txbCodigo);
-            this.Name = "frmCadastroPessoa";
-            this.Text = "Cadastro Pessoa";
-            this.Load += new System.EventHandler(this.frmCadastroPessoa_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dtGridCadastroPessoa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProviderFrmCadastroPessoa)).EndInit();
+            this.Name = "FrmCadastroCliente";
+            this.Text = "Cadastro Cliente";
+            this.Load += new System.EventHandler(this.FrmCadastroCliente_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridCadastroCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderFrmCadastroCliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,8 +238,8 @@
         private System.Windows.Forms.Button btCancelar;
         private System.Windows.Forms.Button btExcluir;
         private System.Windows.Forms.Button btGravar;
-        private System.Windows.Forms.DataGridView dtGridCadastroPessoa;
-        private System.Windows.Forms.ErrorProvider errorProviderFrmCadastroPessoa;
-        private System.Windows.Forms.ToolTip toolTipFrmCadastroPessoa;
+        private System.Windows.Forms.DataGridView dtGridCadastroCliente;
+        private System.Windows.Forms.ErrorProvider errorProviderFrmCadastroCliente;
+        private System.Windows.Forms.ToolTip toolTipFrmCadastroCliente;
     }
 }
