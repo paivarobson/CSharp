@@ -55,7 +55,7 @@
             this.txbCodigo.MaxLength = 4;
             this.txbCodigo.Name = "txbCodigo";
             this.txbCodigo.Size = new System.Drawing.Size(68, 20);
-            this.txbCodigo.TabIndex = 0;
+            this.txbCodigo.TabIndex = 3;
             this.txbCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.consultarAoPressionarEnter);
             // 
             // lbCodigo
@@ -96,7 +96,7 @@
             this.txbNome.MaxLength = 50;
             this.txbNome.Name = "txbNome";
             this.txbNome.Size = new System.Drawing.Size(338, 20);
-            this.txbNome.TabIndex = 6;
+            this.txbNome.TabIndex = 5;
             // 
             // lbTitulo
             // 
@@ -113,7 +113,7 @@
             this.btNovo.Location = new System.Drawing.Point(310, 9);
             this.btNovo.Name = "btNovo";
             this.btNovo.Size = new System.Drawing.Size(75, 23);
-            this.btNovo.TabIndex = 10;
+            this.btNovo.TabIndex = 0;
             this.btNovo.Text = "Novo";
             this.btNovo.UseVisualStyleBackColor = true;
             this.btNovo.Click += new System.EventHandler(this.AoPressionarNovoRegistro);
@@ -124,7 +124,7 @@
             this.btAlterar.Location = new System.Drawing.Point(391, 9);
             this.btAlterar.Name = "btAlterar";
             this.btAlterar.Size = new System.Drawing.Size(75, 23);
-            this.btAlterar.TabIndex = 11;
+            this.btAlterar.TabIndex = 1;
             this.btAlterar.Text = "Alterar";
             this.btAlterar.UseVisualStyleBackColor = true;
             this.btAlterar.Click += new System.EventHandler(this.AoPressionarAlterarRegistro);
@@ -134,7 +134,7 @@
             this.btCancelar.Location = new System.Drawing.Point(391, 130);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btCancelar.TabIndex = 12;
+            this.btCancelar.TabIndex = 6;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
             this.btCancelar.Click += new System.EventHandler(this.AoPressionarCancelar);
@@ -145,7 +145,7 @@
             this.btExcluir.Location = new System.Drawing.Point(472, 9);
             this.btExcluir.Name = "btExcluir";
             this.btExcluir.Size = new System.Drawing.Size(75, 23);
-            this.btExcluir.TabIndex = 13;
+            this.btExcluir.TabIndex = 2;
             this.btExcluir.Text = "Excluir";
             this.btExcluir.UseVisualStyleBackColor = true;
             this.btExcluir.Click += new System.EventHandler(this.AoPressionarExcluirRegistro);
@@ -156,7 +156,7 @@
             this.btGravar.Location = new System.Drawing.Point(472, 130);
             this.btGravar.Name = "btGravar";
             this.btGravar.Size = new System.Drawing.Size(75, 23);
-            this.btGravar.TabIndex = 14;
+            this.btGravar.TabIndex = 7;
             this.btGravar.Text = "Gravar";
             this.btGravar.UseVisualStyleBackColor = true;
             this.btGravar.Click += new System.EventHandler(this.Gravar);
@@ -171,7 +171,7 @@
             this.dtGridCadastroCliente.Name = "dtGridCadastroCliente";
             this.dtGridCadastroCliente.ReadOnly = true;
             this.dtGridCadastroCliente.Size = new System.Drawing.Size(543, 204);
-            this.dtGridCadastroCliente.TabIndex = 15;
+            this.dtGridCadastroCliente.TabIndex = 8;
             // 
             // errorProviderFrmCadastroCliente
             // 
@@ -183,7 +183,7 @@
             this.maskCPF.Mask = "000\\.000\\.000\\-00";
             this.maskCPF.Name = "maskCPF";
             this.maskCPF.Size = new System.Drawing.Size(108, 20);
-            this.maskCPF.TabIndex = 16;
+            this.maskCPF.TabIndex = 4;
             this.maskCPF.Click += new System.EventHandler(this.posicionarCursor);
             this.maskCPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PermitirSomenteNumeros);
             // 
