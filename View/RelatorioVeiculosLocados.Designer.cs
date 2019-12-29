@@ -1,6 +1,6 @@
 ﻿namespace View
 {
-    partial class frmRelatorioLocacao
+    partial class frmOperacaoRelatorioVeiculosLocados
     {
         /// <summary>
         /// Required designer variable.
@@ -30,12 +30,12 @@
         {
             this.SuspendLayout();
             // 
-            // frmRelatorioLocacao
+            // frmOperacaoRelatorioVeiculosLocados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(777, 420);
-            this.Name = "frmRelatorioLocacao";
+            this.Name = "frmOperacaoRelatorioVeiculosLocados";
             this.Text = "Relatório de veículos locados";
             this.ResumeLayout(false);
 
