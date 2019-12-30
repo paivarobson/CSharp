@@ -1,48 +1,63 @@
 
 --###  PROCEDURES VEÍCULO ###
 --CADASTRAR 
-CREATE PROC proc_cadastrarVeiculo
-@veiculoPlaca varchar(7),
-@veiculoDescricao varchar(50)
+CREATE PROC proc_cadastrarLocacao
+@veiculoCodigo INT,
+@clienteCodigo INT,
+@locacaoValorDiaria DECIMAL,
+@locacaoData DATETIME,
+@locacaoDataDevolucao DATETIME
 AS
-INSERT INTO VEICULO (
-	VEIPLC, 
-	VEIDES)
+INSERT INTO LOCACAO(
+	VEICOD, 
+	CLICOD,
+	LOCVLRDIA,
+	LOCDAT,
+	LOCDATDEV)
 VALUES (
-	@veiculoPlaca, 
-	@veiculoDescricao)
+	@veiculoCodigo, 
+	@clienteCodigo,
+	@locacaoValorDiaria,
+	@locacaoData,
+	@locacaoDataDevolucao)
 GO
 
 --ALTERAR
-CREATE PROC proc_alterarVeiculo
-@veiculoCodigo int,
-@veiculoPlaca varchar(7),
-@veiculoDescricao varchar(50)
+CREATE PROC proc_alterarLocacao
+@locacaoCodigo int,
+@veiculoCodigo INT,
+@clienteCodigo INT,
+@locacaoValorDiaria DECIMAL,
+@locacaoData DATETIME,
+@locacaoDataDevolucao DATETIME
 AS
-UPDATE VEICULO 
-SET VEIPLC = @veiculoPlaca,
-	VEIDES = @veiculoDescricao
-WHERE VEICOD = @veiculoCodigo
+UPDATE LOCACAO 
+SET VEICOD = @veiculoCodigo,
+	CLICOD = @clienteCodigo,
+	LOCVLRDIA = @locacaoValorDiaria,
+	LOCDAT = @locacaoData,
+	LOCDATDEV = @locacaoDataDevolucao
+WHERE LOCCOD = @locacaoCodigo
 GO
 
 --EXCLUIR
-CREATE PROC proc_excluirVeiculo
-@veiculoCodigo int
+CREATE PROC proc_excluirLocacao
+@locacaoCodigo int
 AS
-DELETE FROM VEICULO 
-WHERE VEICOD = @veiculoCodigo
+DELETE FROM LOCACAO 
+WHERE LOCCOD = @locacaoCodigo
 GO
 
 --CONSULTAR
-CREATE PROC proc_consultarVeiculo
-@veiculoCodigo int
+CREATE PROC proc_consultarLocacao
+@locacaoCodigo int
 AS
-SELECT * FROM VEICULO
-WHERE VEICOD = @veiculoCodigo
+SELECT * FROM LOCACAO
+WHERE LOCCOD = @locacaoCodigo
 GO
 
 --RECUPERAR ÚLTIMO REGISTRO CADASTRADO
-CREATE PROC proc_recuperarUltimoCadastroVeiculo
+CREATE PROC proc_recuperarUltimoCadastroLocacao
 AS
-SELECT TOP 1 * FROM VEICULO 
-ORDER BY VEICOD DESC
+SELECT TOP 1 * FROM LOCACAO 
+ORDER BY LOCCOD DESC
