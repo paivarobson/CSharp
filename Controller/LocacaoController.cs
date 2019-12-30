@@ -8,7 +8,7 @@ using System.Data;
 
 namespace Controller
 {
-    class LocacaoContoller
+    public class LocacaoController
     {
         LocacaoDados locacaoDados = new LocacaoDados();
         VeiculoDados veiculoDados = new VeiculoDados();
