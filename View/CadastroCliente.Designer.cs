@@ -57,7 +57,7 @@
             this.txbCodigo.Name = "txbCodigo";
             this.txbCodigo.Size = new System.Drawing.Size(68, 20);
             this.txbCodigo.TabIndex = 3;
-            this.txbCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.consultarAoPressionarEnter);
+            this.txbCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ConsultarAoPressionarEnter);
             // 
             // lbCodigo
             // 
@@ -185,7 +185,7 @@
             this.maskCPF.Name = "maskCPF";
             this.maskCPF.Size = new System.Drawing.Size(108, 20);
             this.maskCPF.TabIndex = 4;
-            this.maskCPF.Click += new System.EventHandler(this.posicionarCursor);
+            this.maskCPF.Click += new System.EventHandler(this.PosicionarCursor);
             this.maskCPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PermitirSomenteNumeros);
             // 
             // btRelatorio
@@ -196,7 +196,6 @@
             this.btRelatorio.TabIndex = 9;
             this.btRelatorio.Text = "Relatório";
             this.btRelatorio.UseVisualStyleBackColor = true;
-            this.btRelatorio.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmCadastroCliente
             // 
