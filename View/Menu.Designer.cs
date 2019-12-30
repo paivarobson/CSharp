@@ -108,18 +108,21 @@
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
             this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clienteToolStripMenuItem.Text = "Cliente";
+            this.clienteToolStripMenuItem.Click += new System.EventHandler(this.AoClicarAbrirCadastroCliente);
             // 
             // veículoToolStripMenuItem
             // 
             this.veículoToolStripMenuItem.Name = "veículoToolStripMenuItem";
             this.veículoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.veículoToolStripMenuItem.Text = "Veículo";
+            this.veículoToolStripMenuItem.Click += new System.EventHandler(this.AoClicarAbrirCadastroVeiculo);
             // 
             // locaçãoToolStripMenuItem
             // 
             this.locaçãoToolStripMenuItem.Name = "locaçãoToolStripMenuItem";
             this.locaçãoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.locaçãoToolStripMenuItem.Text = "Locação";
+            this.locaçãoToolStripMenuItem.Click += new System.EventHandler(this.AoClicarAbrirCadastrarLocacao);
             // 
             // relatórioToolStripMenuItem
             // 
@@ -132,8 +135,9 @@
             // veículosLocadosToolStripMenuItem
             // 
             this.veículosLocadosToolStripMenuItem.Name = "veículosLocadosToolStripMenuItem";
-            this.veículosLocadosToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.veículosLocadosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.veículosLocadosToolStripMenuItem.Text = "Veículos locados";
+            this.veículosLocadosToolStripMenuItem.Click += new System.EventHandler(this.AoClicarAbrirRelatorio);
             // 
             // FrmMenu
             // 

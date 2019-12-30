@@ -85,11 +85,11 @@
     <Compile Include="RelatorioVeiculosLocados.Designer.cs">
       <DependentUpon>RelatorioVeiculosLocados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Locacao.cs">
+    <Compile Include="CadastroLocacao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Locacao.Designer.cs">
-      <DependentUpon>Locacao.cs</DependentUpon>
+    <Compile Include="CadastroLocacao.Designer.cs">
+      <DependentUpon>CadastroLocacao.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -119,8 +119,8 @@
     <EmbeddedResource Include="RelatorioVeiculosLocados.resx">
       <DependentUpon>RelatorioVeiculosLocados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Locacao.resx">
-      <DependentUpon>Locacao.cs</DependentUpon>
+    <EmbeddedResource Include="CadastroLocacao.resx">
+      <DependentUpon>CadastroLocacao.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
