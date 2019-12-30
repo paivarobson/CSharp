@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="ConexaoDB.cs" />
     <Compile Include="ClienteDados.cs" />
+    <Compile Include="LocacaoDados.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VeiculoDados.cs" />
   </ItemGroup>
