@@ -17,7 +17,7 @@ namespace locacao
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmCadastroCliente());
+            Application.Run(new FrmMenu());
         }
     }
 }

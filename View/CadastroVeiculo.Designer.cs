@@ -1,6 +1,6 @@
 ﻿namespace View
 {
-    partial class frmCadastroVeiculo
+    partial class FrmCadastroVeiculo
     {
         /// <summary>
         /// Required designer variable.
@@ -28,74 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btGravar = new System.Windows.Forms.Button();
+            this.btExcluir = new System.Windows.Forms.Button();
+            this.btCancelar = new System.Windows.Forms.Button();
+            this.btAlterar = new System.Windows.Forms.Button();
+            this.btNovo = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.txbDescricao = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbCodigo = new System.Windows.Forms.TextBox();
+            this.dtGridCadastroVeiculo = new System.Windows.Forms.DataGridView();
+            this.maskPlaca = new System.Windows.Forms.MaskedTextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridCadastroVeiculo)).BeginInit();
             this.SuspendLayout();
             // 
-            // button5
+            // btGravar
             // 
-            this.button5.Location = new System.Drawing.Point(331, 195);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 28;
-            this.button5.Text = "Gravar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btGravar.Location = new System.Drawing.Point(536, 133);
+            this.btGravar.Name = "btGravar";
+            this.btGravar.Size = new System.Drawing.Size(75, 23);
+            this.btGravar.TabIndex = 28;
+            this.btGravar.Text = "Gravar";
+            this.btGravar.UseVisualStyleBackColor = true;
+            this.btGravar.Click += new System.EventHandler(this.Gravar);
             // 
-            // button4
+            // btExcluir
             // 
-            this.button4.Location = new System.Drawing.Point(356, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(50, 23);
-            this.button4.TabIndex = 27;
-            this.button4.Text = "Excluir";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btExcluir.Location = new System.Drawing.Point(561, 12);
+            this.btExcluir.Name = "btExcluir";
+            this.btExcluir.Size = new System.Drawing.Size(50, 23);
+            this.btExcluir.TabIndex = 27;
+            this.btExcluir.Text = "Excluir";
+            this.btExcluir.UseVisualStyleBackColor = true;
+            this.btExcluir.Click += new System.EventHandler(this.AoPressionarExcluirRegistro);
             // 
-            // button3
+            // btCancelar
             // 
-            this.button3.Location = new System.Drawing.Point(242, 195);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 26;
-            this.button3.Text = "Cancelar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btCancelar.Location = new System.Drawing.Point(447, 133);
+            this.btCancelar.Name = "btCancelar";
+            this.btCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btCancelar.TabIndex = 26;
+            this.btCancelar.Text = "Cancelar";
+            this.btCancelar.UseVisualStyleBackColor = true;
+            this.btCancelar.Click += new System.EventHandler(this.AoPressionarCancelar);
             // 
-            // button2
+            // btAlterar
             // 
-            this.button2.Location = new System.Drawing.Point(299, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(50, 23);
-            this.button2.TabIndex = 25;
-            this.button2.Text = "Alterar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btAlterar.Location = new System.Drawing.Point(504, 12);
+            this.btAlterar.Name = "btAlterar";
+            this.btAlterar.Size = new System.Drawing.Size(50, 23);
+            this.btAlterar.TabIndex = 25;
+            this.btAlterar.Text = "Alterar";
+            this.btAlterar.UseVisualStyleBackColor = true;
+            this.btAlterar.Click += new System.EventHandler(this.AoPressionarAlterarRegistro);
             // 
-            // button1
+            // btNovo
             // 
-            this.button1.Location = new System.Drawing.Point(242, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 23);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Novo";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(257, 94);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(149, 21);
-            this.comboBox1.TabIndex = 23;
+            this.btNovo.Location = new System.Drawing.Point(447, 12);
+            this.btNovo.Name = "btNovo";
+            this.btNovo.Size = new System.Drawing.Size(50, 23);
+            this.btNovo.TabIndex = 24;
+            this.btNovo.Text = "Novo";
+            this.btNovo.UseVisualStyleBackColor = true;
+            this.btNovo.Click += new System.EventHandler(this.AoPressionarNovoRegistro);
             // 
             // label5
             // 
@@ -107,35 +104,20 @@
             this.label5.TabIndex = 22;
             this.label5.Text = "Cadastro de Veículo";
             // 
-            // textBox3
+            // txbDescricao
             // 
-            this.textBox3.Location = new System.Drawing.Point(35, 138);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(371, 20);
-            this.textBox3.TabIndex = 21;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(125, 95);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(109, 20);
-            this.textBox2.TabIndex = 20;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(254, 76);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 15);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Proprietário:";
+            this.txbDescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txbDescricao.Enabled = false;
+            this.txbDescricao.Location = new System.Drawing.Point(240, 95);
+            this.txbDescricao.Name = "txbDescricao";
+            this.txbDescricao.Size = new System.Drawing.Size(371, 20);
+            this.txbDescricao.TabIndex = 21;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(32, 120);
+            this.label3.Location = new System.Drawing.Point(237, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 15);
             this.label3.TabIndex = 18;
@@ -161,34 +143,59 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Código:";
             // 
-            // textBox1
+            // txbCodigo
             // 
-            this.textBox1.Location = new System.Drawing.Point(35, 95);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(68, 20);
-            this.textBox1.TabIndex = 15;
+            this.txbCodigo.Enabled = false;
+            this.txbCodigo.Location = new System.Drawing.Point(35, 95);
+            this.txbCodigo.Name = "txbCodigo";
+            this.txbCodigo.Size = new System.Drawing.Size(68, 20);
+            this.txbCodigo.TabIndex = 15;
+            this.txbCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ConsultarAoPressionarEnter);
             // 
-            // frmCadastroVeiculo
+            // dtGridCadastroVeiculo
+            // 
+            this.dtGridCadastroVeiculo.AllowUserToAddRows = false;
+            this.dtGridCadastroVeiculo.AllowUserToDeleteRows = false;
+            this.dtGridCadastroVeiculo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtGridCadastroVeiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGridCadastroVeiculo.Location = new System.Drawing.Point(12, 187);
+            this.dtGridCadastroVeiculo.Name = "dtGridCadastroVeiculo";
+            this.dtGridCadastroVeiculo.ReadOnly = true;
+            this.dtGridCadastroVeiculo.Size = new System.Drawing.Size(610, 228);
+            this.dtGridCadastroVeiculo.TabIndex = 29;
+            // 
+            // maskPlaca
+            // 
+            this.maskPlaca.Location = new System.Drawing.Point(125, 95);
+            this.maskPlaca.Mask = ">?>?>?\\-0000";
+            this.maskPlaca.Name = "maskPlaca";
+            this.maskPlaca.Size = new System.Drawing.Size(108, 20);
+            this.maskPlaca.TabIndex = 30;
+            this.maskPlaca.Click += new System.EventHandler(this.PosicionarCursor);
+            this.maskPlaca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PermitirSomenteLetrasENumeros);
+            // 
+            // FrmCadastroVeiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 228);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(643, 427);
+            this.Controls.Add(this.maskPlaca);
+            this.Controls.Add(this.dtGridCadastroVeiculo);
+            this.Controls.Add(this.btGravar);
+            this.Controls.Add(this.btExcluir);
+            this.Controls.Add(this.btCancelar);
+            this.Controls.Add(this.btAlterar);
+            this.Controls.Add(this.btNovo);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txbDescricao);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Name = "frmCadastroVeiculo";
+            this.Controls.Add(this.txbCodigo);
+            this.Name = "FrmCadastroVeiculo";
             this.Text = "CadastroVeiculo";
+            this.Load += new System.EventHandler(this.FrmCadastroVeiculo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridCadastroVeiculo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,19 +203,18 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btGravar;
+        private System.Windows.Forms.Button btExcluir;
+        private System.Windows.Forms.Button btCancelar;
+        private System.Windows.Forms.Button btAlterar;
+        private System.Windows.Forms.Button btNovo;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txbDescricao;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbCodigo;
+        private System.Windows.Forms.DataGridView dtGridCadastroVeiculo;
+        private System.Windows.Forms.MaskedTextBox maskPlaca;
     }
 }
