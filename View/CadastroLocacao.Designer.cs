@@ -119,7 +119,7 @@
             // 
             // txbCodigoVeiculo
             // 
-            this.txbCodigoVeiculo.Location = new System.Drawing.Point(78, 63);
+            this.txbCodigoVeiculo.Location = new System.Drawing.Point(74, 63);
             this.txbCodigoVeiculo.Name = "txbCodigoVeiculo";
             this.txbCodigoVeiculo.Size = new System.Drawing.Size(47, 20);
             this.txbCodigoVeiculo.TabIndex = 4;
@@ -138,7 +138,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(75, 45);
+            this.label2.Location = new System.Drawing.Point(71, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 15);
             this.label2.TabIndex = 31;
@@ -166,7 +166,7 @@
             // txbDescricaoVeiculo
             // 
             this.txbDescricaoVeiculo.Enabled = false;
-            this.txbDescricaoVeiculo.Location = new System.Drawing.Point(123, 63);
+            this.txbDescricaoVeiculo.Location = new System.Drawing.Point(121, 63);
             this.txbDescricaoVeiculo.Name = "txbDescricaoVeiculo";
             this.txbDescricaoVeiculo.Size = new System.Drawing.Size(183, 20);
             this.txbDescricaoVeiculo.TabIndex = 5;
@@ -231,7 +231,7 @@
             // 
             this.txbDescricaoCliente.AcceptsReturn = true;
             this.txbDescricaoCliente.Enabled = false;
-            this.txbDescricaoCliente.Location = new System.Drawing.Point(355, 63);
+            this.txbDescricaoCliente.Location = new System.Drawing.Point(357, 63);
             this.txbDescricaoCliente.Name = "txbDescricaoCliente";
             this.txbDescricaoCliente.Size = new System.Drawing.Size(248, 20);
             this.txbDescricaoCliente.TabIndex = 7;
