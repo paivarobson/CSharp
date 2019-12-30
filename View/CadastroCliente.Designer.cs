@@ -116,7 +116,7 @@
             this.btNovo.TabIndex = 0;
             this.btNovo.Text = "Novo";
             this.btNovo.UseVisualStyleBackColor = true;
-            this.btNovo.Click += new System.EventHandler(this.AoPressionarNovoRegistro);
+            this.btNovo.Click += new System.EventHandler(this.AoClicarNovoRegistro);
             // 
             // btAlterar
             // 
@@ -127,7 +127,7 @@
             this.btAlterar.TabIndex = 1;
             this.btAlterar.Text = "Alterar";
             this.btAlterar.UseVisualStyleBackColor = true;
-            this.btAlterar.Click += new System.EventHandler(this.AoPressionarAlterarRegistro);
+            this.btAlterar.Click += new System.EventHandler(this.AoClicarAlterarRegistro);
             // 
             // btCancelar
             // 
@@ -137,7 +137,7 @@
             this.btCancelar.TabIndex = 6;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
-            this.btCancelar.Click += new System.EventHandler(this.AoPressionarCancelar);
+            this.btCancelar.Click += new System.EventHandler(this.AoClicarCancelar);
             // 
             // btExcluir
             // 
@@ -148,7 +148,7 @@
             this.btExcluir.TabIndex = 2;
             this.btExcluir.Text = "Excluir";
             this.btExcluir.UseVisualStyleBackColor = true;
-            this.btExcluir.Click += new System.EventHandler(this.AoPressionarExcluirRegistro);
+            this.btExcluir.Click += new System.EventHandler(this.AoClicarExcluirRegistro);
             // 
             // btGravar
             // 
@@ -207,7 +207,6 @@
             this.Controls.Add(this.txbCodigo);
             this.Name = "FrmCadastroCliente";
             this.Text = "Cadastro Cliente";
-            this.Load += new System.EventHandler(this.FrmCadastroCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtGridCadastroCliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderFrmCadastroCliente)).EndInit();
             this.ResumeLayout(false);

@@ -13,10 +13,6 @@ namespace View
 {
     public partial class FrmCadastroCliente : Form
     {
-        private void FrmCadastroCliente_Load(object sender, EventArgs e)
-        {
-
-        }
         private enum Status
         {
             enInserindo,
@@ -131,8 +127,8 @@ namespace View
         {
             return clienteController.ExcluirCliente(Convert.ToInt32(this.txbCodigo.Text));
         }
-        //AO PRESSIONAR BOTÃO ALTERAR
-        private void AoPressionarAlterarRegistro(object sender, EventArgs e)
+        //AO CLICAR BOTÃO ALTERAR
+        private void AoClicarAlterarRegistro(object sender, EventArgs e)
         {
             if (!this.txbCodigo.Text.Equals(string.Empty) & !this.maskCPF.Text.Equals(string.Empty))
             {
@@ -142,8 +138,8 @@ namespace View
                 maskCPF.SelectAll();
             }
         }
-        //AO PRESSIONAR BOTÃO NOVO
-        private void AoPressionarNovoRegistro(object sender, EventArgs e)
+        //AO CLICAR BOTÃO NOVO
+        private void AoClicarNovoRegistro(object sender, EventArgs e)
         {
             Limpar();
             AlterarStatus(Status.enInserindo);
@@ -168,7 +164,7 @@ namespace View
                 (!this.txbCodigo.Text.Equals(string.Empty)); ;
             this.btGravar.Enabled = emInsercao || emEdicao;
         }
-        //AO PRESSIONAR BOTÃO GRAVAR
+        //AO CLICAR BOTÃO GRAVAR
         private void Gravar(object sender, EventArgs e)
         {
             maskCPF.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
@@ -188,7 +184,7 @@ namespace View
                 Consultar(); 
         }
 
-        private void AoPressionarCancelar(object sender, EventArgs e)
+        private void AoClicarCancelar(object sender, EventArgs e)
         {
             DialogResult confirmacao =
                 MessageBox.Show("Tem certeza que deseja cancelar?", "Cancelar",
@@ -213,7 +209,7 @@ namespace View
             dtGridCadastroCliente.DataSource = null;
         }
 
-        private void AoPressionarExcluirRegistro(object sender, EventArgs e)
+        private void AoClicarExcluirRegistro(object sender, EventArgs e)
         {
             DialogResult confirmacao =
                 MessageBox.Show("Tem certeza que quer excluir o registro?", "Excluir registro",

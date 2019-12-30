@@ -62,7 +62,7 @@
             this.btExcluir.TabIndex = 3;
             this.btExcluir.Text = "Excluir";
             this.btExcluir.UseVisualStyleBackColor = true;
-            this.btExcluir.Click += new System.EventHandler(this.AoPressionarExcluirRegistro);
+            this.btExcluir.Click += new System.EventHandler(this.AoClicarExcluirRegistro);
             // 
             // btCancelar
             // 
@@ -72,7 +72,7 @@
             this.btCancelar.TabIndex = 7;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
-            this.btCancelar.Click += new System.EventHandler(this.AoPressionarCancelar);
+            this.btCancelar.Click += new System.EventHandler(this.AoClicarCancelar);
             // 
             // btAlterar
             // 
@@ -82,7 +82,7 @@
             this.btAlterar.TabIndex = 2;
             this.btAlterar.Text = "Alterar";
             this.btAlterar.UseVisualStyleBackColor = true;
-            this.btAlterar.Click += new System.EventHandler(this.AoPressionarAlterarRegistro);
+            this.btAlterar.Click += new System.EventHandler(this.AoClicarAlterarRegistro);
             // 
             // btNovo
             // 
@@ -92,7 +92,7 @@
             this.btNovo.TabIndex = 0;
             this.btNovo.Text = "Novo";
             this.btNovo.UseVisualStyleBackColor = true;
-            this.btNovo.Click += new System.EventHandler(this.AoPressionarNovoRegistro);
+            this.btNovo.Click += new System.EventHandler(this.AoClicarNovoRegistro);
             // 
             // label5
             // 
@@ -194,7 +194,6 @@
             this.Controls.Add(this.txbCodigo);
             this.Name = "FrmCadastroVeiculo";
             this.Text = "CadastroVeiculo";
-            this.Load += new System.EventHandler(this.FrmCadastroVeiculo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtGridCadastroVeiculo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
