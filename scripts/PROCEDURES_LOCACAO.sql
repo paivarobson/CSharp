@@ -4,22 +4,22 @@
 CREATE PROC proc_cadastrarLocacao
 @veiculoCodigo INT,
 @clienteCodigo INT,
-@locacaoValorDiaria DECIMAL,
 @locacaoData DATETIME,
-@locacaoDataDevolucao DATETIME
+@locacaoDataDevolucao DATETIME,
+@locacaoValorDiaria DECIMAL
 AS
 INSERT INTO LOCACAO(
 	VEICOD, 
 	CLICOD,
-	LOCVLRDIA,
 	LOCDAT,
-	LOCDATDEV)
+	LOCDATDEV,
+	LOCVLRDIA)
 VALUES (
 	@veiculoCodigo, 
 	@clienteCodigo,
-	@locacaoValorDiaria,
 	@locacaoData,
-	@locacaoDataDevolucao)
+	@locacaoDataDevolucao,
+	@locacaoValorDiaria)
 GO
 
 --ALTERAR
@@ -27,16 +27,16 @@ CREATE PROC proc_alterarLocacao
 @locacaoCodigo int,
 @veiculoCodigo INT,
 @clienteCodigo INT,
-@locacaoValorDiaria DECIMAL,
 @locacaoData DATETIME,
-@locacaoDataDevolucao DATETIME
+@locacaoDataDevolucao DATETIME,
+@locacaoValorDiaria DECIMAL
 AS
 UPDATE LOCACAO 
 SET VEICOD = @veiculoCodigo,
 	CLICOD = @clienteCodigo,
-	LOCVLRDIA = @locacaoValorDiaria,
 	LOCDAT = @locacaoData,
-	LOCDATDEV = @locacaoDataDevolucao
+	LOCDATDEV = @locacaoDataDevolucao,
+	LOCVLRDIA = @locacaoValorDiaria
 WHERE LOCCOD = @locacaoCodigo
 GO
 
