@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace Model
 {
-    class LocacaoDados
+    public class LocacaoDados
     {
         private int locacaoCodigo;
         private int veiculoCodigo;
@@ -48,7 +48,7 @@ namespace Model
             this.ClienteCodigo = clienteCodigo;
         }
         //CADASTRAR
-        public string CadastrarCliente(LocacaoDados Locacao)
+        public string CadastrarLocacao(LocacaoDados Locacao)
         {
             string mensagem = "";
 
@@ -110,7 +110,7 @@ namespace Model
             return mensagem;
         }
         //ALTERAR
-        public string AlterarCliente(LocacaoDados Locacao)
+        public string AlterarLocacao(LocacaoDados Locacao)
         {
             string mensagem = "";
 
@@ -327,7 +327,7 @@ namespace Model
             return dataTableCliente;
         }
         //RECUPERAR ÚLTIMO REGISTRO CADASTRADO
-        public DataTable RecuperarUltimoCadastroCliente(LocacaoDados Locacao)
+        public DataTable RecuperarUltimoCadastroLocacao(LocacaoDados Locacao)
         {
             DataTable dataTableLocacao = new DataTable("locacao");
 
