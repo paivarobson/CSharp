@@ -1,6 +1,6 @@
 ﻿namespace View
 {
-    partial class frmLocacao
+    partial class FrmCadastroLocacao
     {
         /// <summary>
         /// Required designer variable.
@@ -28,73 +28,77 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btGravar = new System.Windows.Forms.Button();
+            this.btExcluir = new System.Windows.Forms.Button();
+            this.btCancelar = new System.Windows.Forms.Button();
+            this.btAlterar = new System.Windows.Forms.Button();
+            this.btNovo = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txbValorDiaria = new System.Windows.Forms.TextBox();
+            this.txbCodigoVeiculo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txbCodigoLocacao = new System.Windows.Forms.TextBox();
+            this.txbDescricaoVeiculo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txbData = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txbDataDevolucao = new System.Windows.Forms.TextBox();
+            this.dtGridCadastroLocacao = new System.Windows.Forms.DataGridView();
+            this.txbDescricaoCliente = new System.Windows.Forms.TextBox();
+            this.txbCodigoCliente = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridCadastroLocacao)).BeginInit();
             this.SuspendLayout();
             // 
-            // button5
+            // btGravar
             // 
-            this.button5.Location = new System.Drawing.Point(528, 105);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 42;
-            this.button5.Text = "Gravar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btGravar.Enabled = false;
+            this.btGravar.Location = new System.Drawing.Point(528, 104);
+            this.btGravar.Name = "btGravar";
+            this.btGravar.Size = new System.Drawing.Size(75, 23);
+            this.btGravar.TabIndex = 12;
+            this.btGravar.Text = "Gravar";
+            this.btGravar.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btExcluir
             // 
-            this.button4.Location = new System.Drawing.Point(553, 9);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(50, 23);
-            this.button4.TabIndex = 41;
-            this.button4.Text = "Excluir";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btExcluir.Enabled = false;
+            this.btExcluir.Location = new System.Drawing.Point(553, 9);
+            this.btExcluir.Name = "btExcluir";
+            this.btExcluir.Size = new System.Drawing.Size(50, 23);
+            this.btExcluir.TabIndex = 2;
+            this.btExcluir.Text = "Excluir";
+            this.btExcluir.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btCancelar
             // 
-            this.button3.Location = new System.Drawing.Point(439, 105);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 40;
-            this.button3.Text = "Cancelar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btCancelar.Location = new System.Drawing.Point(447, 104);
+            this.btCancelar.Name = "btCancelar";
+            this.btCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btCancelar.TabIndex = 11;
+            this.btCancelar.Text = "Cancelar";
+            this.btCancelar.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btAlterar
             // 
-            this.button2.Location = new System.Drawing.Point(496, 9);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(50, 23);
-            this.button2.TabIndex = 39;
-            this.button2.Text = "Alterar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btAlterar.Enabled = false;
+            this.btAlterar.Location = new System.Drawing.Point(496, 9);
+            this.btAlterar.Name = "btAlterar";
+            this.btAlterar.Size = new System.Drawing.Size(50, 23);
+            this.btAlterar.TabIndex = 1;
+            this.btAlterar.Text = "Alterar";
+            this.btAlterar.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btNovo
             // 
-            this.button1.Location = new System.Drawing.Point(439, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 23);
-            this.button1.TabIndex = 38;
-            this.button1.Text = "Novo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btNovo.Location = new System.Drawing.Point(439, 9);
+            this.btNovo.Name = "btNovo";
+            this.btNovo.Size = new System.Drawing.Size(50, 23);
+            this.btNovo.TabIndex = 0;
+            this.btNovo.Text = "Novo";
+            this.btNovo.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -106,19 +110,19 @@
             this.label5.TabIndex = 36;
             this.label5.Text = "Locação de veículo";
             // 
-            // textBox3
+            // txbValorDiaria
             // 
-            this.textBox3.Location = new System.Drawing.Point(225, 107);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(68, 20);
-            this.textBox3.TabIndex = 35;
+            this.txbValorDiaria.Location = new System.Drawing.Point(225, 107);
+            this.txbValorDiaria.Name = "txbValorDiaria";
+            this.txbValorDiaria.Size = new System.Drawing.Size(68, 20);
+            this.txbValorDiaria.TabIndex = 10;
             // 
-            // textBox2
+            // txbCodigoVeiculo
             // 
-            this.textBox2.Location = new System.Drawing.Point(95, 63);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(47, 20);
-            this.textBox2.TabIndex = 34;
+            this.txbCodigoVeiculo.Location = new System.Drawing.Point(78, 63);
+            this.txbCodigoVeiculo.Name = "txbCodigoVeiculo";
+            this.txbCodigoVeiculo.Size = new System.Drawing.Size(47, 20);
+            this.txbCodigoVeiculo.TabIndex = 4;
             // 
             // label3
             // 
@@ -134,7 +138,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(92, 45);
+            this.label2.Location = new System.Drawing.Point(75, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 15);
             this.label2.TabIndex = 31;
@@ -150,45 +154,39 @@
             this.label1.TabIndex = 30;
             this.label1.Text = "Código:";
             // 
-            // textBox1
+            // txbCodigoLocacao
             // 
-            this.textBox1.Location = new System.Drawing.Point(21, 63);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(68, 20);
-            this.textBox1.TabIndex = 29;
+            this.txbCodigoLocacao.Enabled = false;
+            this.txbCodigoLocacao.Location = new System.Drawing.Point(21, 63);
+            this.txbCodigoLocacao.MaxLength = 4;
+            this.txbCodigoLocacao.Name = "txbCodigoLocacao";
+            this.txbCodigoLocacao.Size = new System.Drawing.Size(46, 20);
+            this.txbCodigoLocacao.TabIndex = 3;
             // 
-            // textBox4
+            // txbDescricaoVeiculo
             // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(140, 63);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(308, 20);
-            this.textBox4.TabIndex = 43;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(454, 62);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(149, 21);
-            this.comboBox1.TabIndex = 45;
+            this.txbDescricaoVeiculo.Enabled = false;
+            this.txbDescricaoVeiculo.Location = new System.Drawing.Point(123, 63);
+            this.txbDescricaoVeiculo.Name = "txbDescricaoVeiculo";
+            this.txbDescricaoVeiculo.Size = new System.Drawing.Size(183, 20);
+            this.txbDescricaoVeiculo.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(451, 44);
+            this.label4.Location = new System.Drawing.Point(307, 44);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 15);
+            this.label4.Size = new System.Drawing.Size(48, 15);
             this.label4.TabIndex = 44;
-            this.label4.Text = "Locatário:";
+            this.label4.Text = "Cliente:";
             // 
-            // textBox5
+            // txbData
             // 
-            this.textBox5.Location = new System.Drawing.Point(21, 107);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(96, 20);
-            this.textBox5.TabIndex = 47;
+            this.txbData.Location = new System.Drawing.Point(21, 107);
+            this.txbData.Name = "txbData";
+            this.txbData.Size = new System.Drawing.Size(96, 20);
+            this.txbData.TabIndex = 8;
             // 
             // label6
             // 
@@ -210,53 +208,70 @@
             this.label7.TabIndex = 48;
             this.label7.Text = "Data fim:";
             // 
-            // textBox7
+            // txbDataDevolucao
             // 
-            this.textBox7.Location = new System.Drawing.Point(123, 107);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(96, 20);
-            this.textBox7.TabIndex = 50;
+            this.txbDataDevolucao.Location = new System.Drawing.Point(123, 107);
+            this.txbDataDevolucao.Name = "txbDataDevolucao";
+            this.txbDataDevolucao.Size = new System.Drawing.Size(96, 20);
+            this.txbDataDevolucao.TabIndex = 9;
             // 
-            // dataGridView1
+            // dtGridCadastroLocacao
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 157);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(604, 297);
-            this.dataGridView1.TabIndex = 51;
+            this.dtGridCadastroLocacao.AllowUserToAddRows = false;
+            this.dtGridCadastroLocacao.AllowUserToDeleteRows = false;
+            this.dtGridCadastroLocacao.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtGridCadastroLocacao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGridCadastroLocacao.Location = new System.Drawing.Point(12, 157);
+            this.dtGridCadastroLocacao.Name = "dtGridCadastroLocacao";
+            this.dtGridCadastroLocacao.ReadOnly = true;
+            this.dtGridCadastroLocacao.Size = new System.Drawing.Size(604, 297);
+            this.dtGridCadastroLocacao.TabIndex = 13;
             // 
-            // frmLocacao
+            // txbDescricaoCliente
+            // 
+            this.txbDescricaoCliente.AcceptsReturn = true;
+            this.txbDescricaoCliente.Enabled = false;
+            this.txbDescricaoCliente.Location = new System.Drawing.Point(355, 63);
+            this.txbDescricaoCliente.Name = "txbDescricaoCliente";
+            this.txbDescricaoCliente.Size = new System.Drawing.Size(248, 20);
+            this.txbDescricaoCliente.TabIndex = 7;
+            // 
+            // txbCodigoCliente
+            // 
+            this.txbCodigoCliente.Location = new System.Drawing.Point(310, 63);
+            this.txbCodigoCliente.Name = "txbCodigoCliente";
+            this.txbCodigoCliente.Size = new System.Drawing.Size(47, 20);
+            this.txbCodigoCliente.TabIndex = 6;
+            // 
+            // FrmCadastroLocacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(628, 466);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txbDescricaoCliente);
+            this.Controls.Add(this.txbCodigoCliente);
+            this.Controls.Add(this.dtGridCadastroLocacao);
+            this.Controls.Add(this.txbDataDevolucao);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txbData);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txbDescricaoVeiculo);
+            this.Controls.Add(this.btGravar);
+            this.Controls.Add(this.btExcluir);
+            this.Controls.Add(this.btCancelar);
+            this.Controls.Add(this.btAlterar);
+            this.Controls.Add(this.btNovo);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txbValorDiaria);
+            this.Controls.Add(this.txbCodigoVeiculo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Name = "frmLocacao";
+            this.Controls.Add(this.txbCodigoLocacao);
+            this.Name = "FrmCadastroLocacao";
             this.Text = "Locacao";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridCadastroLocacao)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,25 +279,26 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btGravar;
+        private System.Windows.Forms.Button btExcluir;
+        private System.Windows.Forms.Button btCancelar;
+        private System.Windows.Forms.Button btAlterar;
+        private System.Windows.Forms.Button btNovo;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txbValorDiaria;
+        private System.Windows.Forms.TextBox txbCodigoVeiculo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txbCodigoLocacao;
+        private System.Windows.Forms.TextBox txbDescricaoVeiculo;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txbData;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txbDataDevolucao;
+        private System.Windows.Forms.DataGridView dtGridCadastroLocacao;
+        private System.Windows.Forms.TextBox txbDescricaoCliente;
+        private System.Windows.Forms.TextBox txbCodigoCliente;
     }
 }

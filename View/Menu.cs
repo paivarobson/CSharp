@@ -33,9 +33,9 @@ namespace View
 
         private void AoClicarAbrirCadastrarLocacao(object sender, EventArgs e)
         {
-            //FrmCadastroLocacao cadastroLocacao = new FrmCadastroLocacao();
+            FrmCadastroLocacao cadastroLocacao = new FrmCadastroLocacao();
 
-            //cadastroLocacao.Show();
+            cadastroLocacao.Show();
         }
 
         private void AoClicarAbrirRelatorio(object sender, EventArgs e)
