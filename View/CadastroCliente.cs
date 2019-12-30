@@ -164,7 +164,8 @@ namespace View
                 (!this.txbCodigo.Text.Equals(string.Empty) & !this.maskCPF.Text.Equals(string.Empty));
             this.btExcluir.Enabled = emConsulta && 
                 (!this.txbCodigo.Text.Equals(string.Empty) & !this.maskCPF.Text.Equals(string.Empty));
-            this.btCancelar.Enabled = emInsercao || emEdicao || emConsulta;
+            this.btCancelar.Enabled = emInsercao || emEdicao || emConsulta &&
+                (!this.txbCodigo.Text.Equals(string.Empty)); ;
             this.btGravar.Enabled = emInsercao || emEdicao;
         }
         //AO PRESSIONAR BOTÃO GRAVAR
