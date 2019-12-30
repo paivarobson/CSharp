@@ -18,7 +18,6 @@ namespace Model
         public int ClienteCodigo { get => clienteCodigo; set => clienteCodigo = value; }
         public string ClienteCPF { get => clienteCPF; set => clienteCPF = value; }
         public string ClienteNome { get => clienteNome; set => clienteNome = value; }
-        public bool ClienteTipo { get => clienteTipo; set => clienteTipo = value; }
 
         public ClienteDados()
         {
@@ -28,12 +27,11 @@ namespace Model
         SqlCommand sqlCommand = new SqlCommand();
         SqlConnection sqlConnection = new SqlConnection();
 
-        public ClienteDados(int clienteCodigo, string clienteCPF, string clienteNome, bool clienteTipo)
+        public ClienteDados(int clienteCodigo, string clienteCPF, string clienteNome)
         {
             this.ClienteCodigo = clienteCodigo;
             this.ClienteCPF = clienteCPF;
             this.ClienteNome = clienteNome;
-            this.ClienteTipo = clienteTipo;
         }        
         //CADASTRAR
         public string CadastrarCliente(ClienteDados Cliente)
