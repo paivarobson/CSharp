@@ -24,7 +24,7 @@ GO
 
 --ALTERAR
 CREATE PROC proc_alterarLocacao
-@locacaoCodigo int,
+@locacaoCodigo INT,
 @veiculoCodigo INT,
 @clienteCodigo INT,
 @locacaoData DATETIME,
@@ -52,7 +52,18 @@ GO
 CREATE PROC proc_consultarLocacao
 @locacaoCodigo INT
 AS
-SELECT * FROM LOCACAO
+SELECT 
+	LOCCOD, 
+	V.VEICOD, 
+	V.VEIDES, 
+	C.CLICOD, 
+	C.CLINOM, 
+	LOCDAT, 
+	LOCDATDEV,
+	LOCVLRDIA 
+FROM LOCACAO L
+	INNER JOIN VEICULO V ON V.VEICOD = L.VEICOD
+	INNER JOIN CLIENTE C ON C.CLICOD = L.CLICOD
 WHERE LOCCOD = @locacaoCodigo
 GO
 
