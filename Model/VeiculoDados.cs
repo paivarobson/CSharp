@@ -237,6 +237,84 @@ namespace Model
             }
 
             return dataTableVeiculo;
+        }        
+        //LOCAR VEÍCULO
+        public string LocarVeiculo(VeiculoDados Veiculo)
+        {
+            string mensagem = "";
+
+            try
+            {
+                //Conexão BD
+                sqlConnection.ConnectionString = ConexaoDB.conexao;
+                sqlConnection.Open();
+                //Acesso ao BD via procedure
+                sqlCommand.Connection = sqlConnection;
+                sqlCommand.CommandText = "proc_LocarVeiculo";
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                //Parãmetro CÓDIGO
+                SqlParameter PVeiculoCodigo = new SqlParameter();
+                PVeiculoCodigo.ParameterName = "@veiculoCodigo";
+                PVeiculoCodigo.SqlDbType = SqlDbType.Int;
+                PVeiculoCodigo.Value = Veiculo.VeiculoCodigo;
+                sqlCommand.Parameters.Clear();
+                sqlCommand.Parameters.Add(PVeiculoCodigo);
+
+                mensagem = sqlCommand.ExecuteNonQuery() == 1 ?
+                    "Veículo locado com sucesso" : "Algo de errado ocorreu e não foi possível alterar o registro";
+
+            }
+            catch (Exception e)
+            {
+                mensagem = e.Message;
+            }
+            finally
+            {
+                if (sqlConnection.State == ConnectionState.Open)
+                    sqlConnection.Close();
+            }
+
+            return mensagem;
+        }
+        //LIBERAR VEÍCULO PARA LOCAÇÃO
+        public string LiberarVeiculoParaLocacao(VeiculoDados Veiculo)
+        {
+            string mensagem = "";
+
+            try
+            {
+                //Conexão BD
+                sqlConnection.ConnectionString = ConexaoDB.conexao;
+                sqlConnection.Open();
+                //Acesso ao BD via procedure
+                sqlCommand.Connection = sqlConnection;
+                sqlCommand.CommandText = "proc_LiberarVeiculo";
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                //Parãmetro CÓDIGO
+                SqlParameter PVeiculoCodigo = new SqlParameter();
+                PVeiculoCodigo.ParameterName = "@veiculoCodigo";
+                PVeiculoCodigo.SqlDbType = SqlDbType.Int;
+                PVeiculoCodigo.Value = Veiculo.VeiculoCodigo;
+                sqlCommand.Parameters.Clear();
+                sqlCommand.Parameters.Add(PVeiculoCodigo);
+
+                mensagem = sqlCommand.ExecuteNonQuery() == 1 ?
+                    "Veículo liberado para locação com sucesso" : "Algo de errado ocorreu e não foi possível alterar o registro";
+
+            }
+            catch (Exception e)
+            {
+                mensagem = e.Message;
+            }
+            finally
+            {
+                if (sqlConnection.State == ConnectionState.Open)
+                    sqlConnection.Close();
+            }
+
+            return mensagem;
         }
     }
 }

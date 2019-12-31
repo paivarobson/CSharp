@@ -28,6 +28,8 @@ namespace Controller
             locacaoDados.LocacaoDataDevolucao = locacaoDataDevolucao;
             locacaoDados.LocacaoValorDiaria = locacaoValorDiaria;
 
+            veiculoDados.LocarVeiculo(veiculoDados);
+
             return locacaoDados.CadastrarLocacao(locacaoDados);
         }
         //ALTERAR
@@ -82,6 +84,13 @@ namespace Controller
             LocacaoDados locacaoDados = new LocacaoDados();
 
             return locacaoDados.RecuperarUltimoCadastroLocacao(locacaoDados);
+        }
+
+        public string LiberarVeiculoParaLocacao(int veiculoCodigo)
+        {
+            veiculoDados.VeiculoCodigo = veiculoCodigo;
+
+            return veiculoDados.LiberarVeiculoParaLocacao(veiculoDados);
         }
     }
 }

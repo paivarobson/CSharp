@@ -96,7 +96,6 @@ namespace View
 
             RecuperarUltimoCadastroLocacao();
             Consultar();
-            HabilitarDesabilitarComponentes();
             txbLocacaoVeiculoCodigo.Focus();
             txbLocacaoVeiculoCodigo.SelectAll();
         }
@@ -153,6 +152,20 @@ namespace View
                 if (locacaoController.ConsultarVeiculo(
                         Convert.ToInt32(this.txbLocacaoVeiculoCodigo.Text)).Rows.Count > 0 )
                 {
+                    if (locacaoController.ConsultarVeiculo(
+                            Convert.ToInt32(this.txbLocacaoVeiculoCodigo.Text)).Rows[0]["VEIDISP"].ToString().Equals("N"))
+                    {
+                        DialogResult confirmacao =
+                            MessageBox.Show("Veículo está locado. \nDeseja liberar este veículo para locação?", "Veículo indisponível",
+                            MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+
+                        if (confirmacao.ToString().ToUpper() == "YES")
+                        {
+                            LiberarVeiculoParaLocacao();
+                        }
+                        txbLocacaoVeiculoCodigo.Focus();
+                        txbLocacaoVeiculoCodigo.SelectAll();
+                    }
                     this.txbLocacaoVeiculoDescricao.Text =
                         locacaoController.ConsultarVeiculo(
                             Convert.ToInt32(this.txbLocacaoVeiculoCodigo.Text)).Rows[0]["VEIDES"].ToString();
@@ -192,6 +205,11 @@ namespace View
             this.txbLocacaoCodigo.Text = dtGridCadastroLocacao.Rows[0].Cells[0].Value.ToString();
             this.txbLocacaoVeiculoCodigo.Text = dtGridCadastroLocacao.Rows[0].Cells[1].Value.ToString();
             this.txbLocacaoVeiculoDescricao.Text = dtGridCadastroLocacao.Rows[0].Cells[2].Value.ToString();
+            this.txbLocacaoClienteCodigo.Text = dtGridCadastroLocacao.Rows[0].Cells[3].Value.ToString();
+            this.txbLocacaoClienteNome.Text = dtGridCadastroLocacao.Rows[0].Cells[4].Value.ToString();
+            this.maskLocacaoData.Text = dtGridCadastroLocacao.Rows[0].Cells[5].Value.ToString();
+            this.maskLocacaoDataDevolucao.Text = dtGridCadastroLocacao.Rows[0].Cells[5].Value.ToString();
+            this.txbLocacaoValorDiaria.Text = dtGridCadastroLocacao.Rows[0].Cells[5].Value.ToString();
 
         }
         //ALTERAR
@@ -364,6 +382,12 @@ namespace View
         private void LimparNomeCliente(object sender, EventArgs e)
         {
             txbLocacaoClienteNome.Clear();
+        }
+
+        private void LiberarVeiculoParaLocacao()
+        {
+            locacaoController.LiberarVeiculoParaLocacao(
+                Convert.ToInt32(this.txbLocacaoVeiculoCodigo.Text));
         }
     }
 }
