@@ -94,7 +94,7 @@ namespace Model
                 sqlCommand.Parameters.Add(PLocacaoValorDiaria);
 
                 mensagem = sqlCommand.ExecuteNonQuery() == 1 ?
-                    "Cadastro realizado com sucesso" : "Algo de errado ocorreu e não foi possível inserir o registro";
+                    "Cadastro realizado" : "Algo de errado ocorreu e não foi possível inserir o registro";
 
             }
             catch (Exception e)

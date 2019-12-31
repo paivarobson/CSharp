@@ -28,9 +28,8 @@ namespace Controller
             locacaoDados.LocacaoDataDevolucao = locacaoDataDevolucao;
             locacaoDados.LocacaoValorDiaria = locacaoValorDiaria;
 
-            veiculoDados.LocarVeiculo(veiculoDados);
-
-            return locacaoDados.CadastrarLocacao(locacaoDados);
+            return locacaoDados.CadastrarLocacao(locacaoDados) + 
+                " e " + veiculoDados.LocarVeiculo(veiculoDados);
         }
         //ALTERAR
         public string AlterarLocacao(
