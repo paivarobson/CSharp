@@ -1,5 +1,5 @@
 
---###  PROCEDURES VEÕCULO ###
+--###  PROCEDURES VE√çCULO ###
 --CADASTRAR 
 CREATE PROC proc_cadastrarVeiculo
 @veiculoPlaca varchar(7),
@@ -41,8 +41,18 @@ SELECT * FROM VEICULO
 WHERE VEICOD = @veiculoCodigo
 GO
 
---RECUPERAR ⁄LTIMO REGISTRO CADASTRADO
+--RECUPERAR √öLTIMO REGISTRO CADASTRADO
 CREATE PROC proc_recuperarUltimoCadastroVeiculo
 AS
 SELECT TOP 1 * FROM VEICULO 
 ORDER BY VEICOD DESC
+
+--ALTERAR STATUS
+CREATE PROC proc_alterarStatusVeiculo
+@veiculoCodigo INT,
+@veiculoDisponivel CHAR
+AS
+UPDATE VEICULO 
+SET VEIDISP = @veiculoDisponivel
+WHERE VEICOD = @veiculoCodigo
+GO
