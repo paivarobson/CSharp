@@ -156,9 +156,9 @@ namespace View
             //Botões
             this.btNovo.Enabled = emConsulta;
             this.btAlterar.Enabled = emConsulta &&
-                (!this.txbCodigo.Text.Equals(string.Empty) & !this.maskCPF.Text.Equals(string.Empty));
+                (!this.txbCodigo.Text.Equals(string.Empty) & !this.maskCPF.Text.Equals("   .   .   -"));
             this.btExcluir.Enabled = emConsulta && 
-                (!this.txbCodigo.Text.Equals(string.Empty) & !this.maskCPF.Text.Equals(string.Empty));
+                (!this.txbCodigo.Text.Equals(string.Empty) & !this.maskCPF.Text.Equals("   .   .   -"));
             this.btCancelar.Enabled = emInsercao || emEdicao || emConsulta &&
                 (!this.txbCodigo.Text.Equals(string.Empty)); ;
             this.btGravar.Enabled = emInsercao || emEdicao;

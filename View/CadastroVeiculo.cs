@@ -153,9 +153,9 @@ namespace View
             //Botões
             this.btNovo.Enabled = emConsulta;
             this.btAlterar.Enabled = emConsulta &&
-                (!this.txbCodigo.Text.Equals(string.Empty) & !this.maskPlaca.Text.Equals(string.Empty));
+                (!this.txbCodigo.Text.Equals(string.Empty) & !this.maskPlaca.Text.Equals("   -"));
             this.btExcluir.Enabled = emConsulta &&
-                (!this.txbCodigo.Text.Equals(string.Empty) & !this.maskPlaca.Text.Equals(string.Empty));
+                (!this.txbCodigo.Text.Equals(string.Empty) & !this.maskPlaca.Text.Equals("   -"));
             this.btCancelar.Enabled = emInsercao || emEdicao || emConsulta &&
                 (!this.txbCodigo.Text.Equals(string.Empty));
             this.btGravar.Enabled = emInsercao || emEdicao;
@@ -241,7 +241,7 @@ namespace View
 
         private void PosicionarCursor(object sender, EventArgs e)
         {
-            if (maskPlaca.Text.Equals("   -"))
+            //if (maskPlaca.Text.Equals("   -"))
                 maskPlaca.SelectAll();
         }
     }
