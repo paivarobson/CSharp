@@ -12,7 +12,7 @@ INSERT INTO VEICULO (
 VALUES (
 	@veiculoPlaca, 
 	@veiculoDescricao,
-	'N')
+	'S')
 GO
 
 --ALTERAR
