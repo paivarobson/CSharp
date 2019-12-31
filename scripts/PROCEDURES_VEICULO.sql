@@ -3,8 +3,7 @@
 --CADASTRAR 
 CREATE PROC proc_cadastrarVeiculo
 @veiculoPlaca varchar(7),
-@veiculoDescricao varchar(50),
-@veiculoDisponivel char
+@veiculoDescricao varchar(50)
 AS
 INSERT INTO VEICULO (
 	VEIPLC, 
