@@ -3,14 +3,17 @@
 --CADASTRAR 
 CREATE PROC proc_cadastrarVeiculo
 @veiculoPlaca varchar(7),
-@veiculoDescricao varchar(50)
+@veiculoDescricao varchar(50),
+@veiculoDisponivel char
 AS
 INSERT INTO VEICULO (
 	VEIPLC, 
-	VEIDES)
+	VEIDES, 
+	VEIDISP)
 VALUES (
 	@veiculoPlaca, 
-	@veiculoDescricao)
+	@veiculoDescricao,
+	'N')
 GO
 
 --ALTERAR
@@ -47,12 +50,22 @@ AS
 SELECT TOP 1 * FROM VEICULO 
 ORDER BY VEICOD DESC
 
---ALTERAR STATUS
-CREATE PROC proc_alterarStatusVeiculo
+--LIBERAR VEÍCULO
+CREATE PROC proc_LiberarVeiculo
 @veiculoCodigo INT,
 @veiculoDisponivel CHAR
 AS
 UPDATE VEICULO 
-SET VEIDISP = @veiculoDisponivel
+SET VEIDISP = 'S'
+WHERE VEICOD = @veiculoCodigo
+GO
+
+--LOCAR VEÍCULO
+CREATE PROC proc_LocarVeiculo
+@veiculoCodigo INT,
+@veiculoDisponivel CHAR
+AS
+UPDATE VEICULO 
+SET VEIDISP = 'N'
 WHERE VEICOD = @veiculoCodigo
 GO
