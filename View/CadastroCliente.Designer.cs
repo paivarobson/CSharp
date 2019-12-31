@@ -159,7 +159,7 @@
             this.btGravar.TabIndex = 7;
             this.btGravar.Text = "Gravar";
             this.btGravar.UseVisualStyleBackColor = true;
-            this.btGravar.Click += new System.EventHandler(this.Gravar);
+            this.btGravar.Click += new System.EventHandler(this.AoClicarGravar);
             // 
             // dtGridCadastroCliente
             // 

@@ -35,7 +35,6 @@ namespace View
             this.toolTipFrmCadastroCliente.SetToolTip(this.txbCodigo, "Código");
             this.toolTipFrmCadastroCliente.SetToolTip(this.maskCPF, "Digite o CPF");
             this.toolTipFrmCadastroCliente.SetToolTip(this.txbNome, "Digite o nome");
-
         }
 
         private void AlterarStatus(Status status)
@@ -165,7 +164,7 @@ namespace View
             this.btGravar.Enabled = emInsercao || emEdicao;
         }
         //AO CLICAR BOTÃO GRAVAR
-        private void Gravar(object sender, EventArgs e)
+        private void AoClicarGravar(object sender, EventArgs e)
         {
             maskCPF.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             if (emInsercao)
