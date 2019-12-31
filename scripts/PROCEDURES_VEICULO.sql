@@ -52,8 +52,7 @@ ORDER BY VEICOD DESC
 
 --LIBERAR VEÍCULO
 CREATE PROC proc_LiberarVeiculo
-@veiculoCodigo INT,
-@veiculoDisponivel CHAR
+@veiculoCodigo INT
 AS
 UPDATE VEICULO 
 SET VEIDISP = 'S'
@@ -62,8 +61,7 @@ GO
 
 --LOCAR VEÍCULO
 CREATE PROC proc_LocarVeiculo
-@veiculoCodigo INT,
-@veiculoDisponivel CHAR
+@veiculoCodigo INT
 AS
 UPDATE VEICULO 
 SET VEIDISP = 'N'
