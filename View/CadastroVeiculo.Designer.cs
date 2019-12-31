@@ -49,7 +49,7 @@
             this.btGravar.Location = new System.Drawing.Point(536, 133);
             this.btGravar.Name = "btGravar";
             this.btGravar.Size = new System.Drawing.Size(75, 23);
-            this.btGravar.TabIndex = 8;
+            this.btGravar.TabIndex = 7;
             this.btGravar.Text = "Gravar";
             this.btGravar.UseVisualStyleBackColor = true;
             this.btGravar.Click += new System.EventHandler(this.Gravar);
@@ -59,7 +59,7 @@
             this.btExcluir.Location = new System.Drawing.Point(561, 12);
             this.btExcluir.Name = "btExcluir";
             this.btExcluir.Size = new System.Drawing.Size(50, 23);
-            this.btExcluir.TabIndex = 3;
+            this.btExcluir.TabIndex = 2;
             this.btExcluir.Text = "Excluir";
             this.btExcluir.UseVisualStyleBackColor = true;
             this.btExcluir.Click += new System.EventHandler(this.AoClicarExcluirRegistro);
@@ -69,7 +69,7 @@
             this.btCancelar.Location = new System.Drawing.Point(447, 133);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btCancelar.TabIndex = 7;
+            this.btCancelar.TabIndex = 6;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
             this.btCancelar.Click += new System.EventHandler(this.AoClicarCancelar);
@@ -79,7 +79,7 @@
             this.btAlterar.Location = new System.Drawing.Point(504, 12);
             this.btAlterar.Name = "btAlterar";
             this.btAlterar.Size = new System.Drawing.Size(50, 23);
-            this.btAlterar.TabIndex = 2;
+            this.btAlterar.TabIndex = 1;
             this.btAlterar.Text = "Alterar";
             this.btAlterar.UseVisualStyleBackColor = true;
             this.btAlterar.Click += new System.EventHandler(this.AoClicarAlterarRegistro);
@@ -111,7 +111,7 @@
             this.txbDescricao.Location = new System.Drawing.Point(240, 95);
             this.txbDescricao.Name = "txbDescricao";
             this.txbDescricao.Size = new System.Drawing.Size(371, 20);
-            this.txbDescricao.TabIndex = 6;
+            this.txbDescricao.TabIndex = 5;
             // 
             // label3
             // 
@@ -149,7 +149,7 @@
             this.txbCodigo.Location = new System.Drawing.Point(35, 95);
             this.txbCodigo.Name = "txbCodigo";
             this.txbCodigo.Size = new System.Drawing.Size(68, 20);
-            this.txbCodigo.TabIndex = 4;
+            this.txbCodigo.TabIndex = 3;
             this.txbCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ConsultarAoPressionarEnter);
             // 
             // dtGridCadastroVeiculo
@@ -170,7 +170,7 @@
             this.maskPlaca.Mask = ">?>?>?\\-0000";
             this.maskPlaca.Name = "maskPlaca";
             this.maskPlaca.Size = new System.Drawing.Size(108, 20);
-            this.maskPlaca.TabIndex = 5;
+            this.maskPlaca.TabIndex = 4;
             this.maskPlaca.Click += new System.EventHandler(this.PosicionarCursor);
             this.maskPlaca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PermitirSomenteLetrasENumeros);
             // 
